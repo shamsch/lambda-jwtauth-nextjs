@@ -52,7 +52,7 @@ form>label>input{
   border-radius: 5px;
 }
 
-form>button{
+button{
   width: 100px;
   height: 50px;
   border: 1px solid #ccc;
@@ -64,9 +64,37 @@ form>button{
   cursor: pointer;
 }
 
+button:hover{
+  background-color: #fff;
+  color: #006699;
+}
+
 /* on hoover effect on the a tag */
 header>a:hover{
   background-color: cadetblue;
   text-decoration: underline;
 }
 
+.notification{
+  width: 50%;
+  height: 50%;
+  background-color: #ccc;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #333;
+  font-size: 1.5em;
+  font-weight: bold;
+  margin: auto;
+}
+
+.btn{
+  margin: 50px;
+  background-color: #ff7f4f;
+  
+}
+
+.text{
+  font-size: 1.5em;;
+  color: #333;
+}
