@@ -5,9 +5,10 @@ const Logout = () => {
 
     const handleClick = () => {
         router.push("/");
-        localStorage.removeItem("token");
+        sessionStorage.clear();
     };
-    return <button className="btn" onClick={handleClick}>log out</button>;
+    
+    return <button className="btn" onClick={handleClick}>Click to log out</button>;
 };
 
 export default Logout;

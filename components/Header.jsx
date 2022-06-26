@@ -4,7 +4,7 @@ import Link from "next/link";
 const Header = () => {
     let token = null;
     if (typeof window !== "undefined") {
-        token = localStorage.getItem("token");
+        token = sessionStorage.getItem("token");
     }
     return (
         <>

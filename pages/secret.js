@@ -4,7 +4,7 @@ const Secret = () => {
     const { data, error } = useSWR("/api/", (url) =>
         fetch(url, {
             headers: {
-                authorization: `Bearer ${localStorage.getItem("token")}`,
+                authorization: `Bearer ${sessionStorage.getItem("token")}`,
             },
         }).then((res) => res.json())
     );
