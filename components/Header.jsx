@@ -1,8 +1,11 @@
 import React from "react";
 import Head from "next/head";
 import Link from "next/link";
-
 const Header = () => {
+    let token = null;
+    if (typeof window !== "undefined") {
+        token = localStorage.getItem("token");
+    }
     return (
         <>
             <Head>
@@ -12,12 +15,25 @@ const Header = () => {
                 <Link href="/">
                     <a>Home</a>
                 </Link>
-                <Link href="/login">
-                    <a>Login</a>
-                </Link>
-                <Link href="/signup">
-                    <a>Signup</a>
-                </Link>
+                {token ? (
+                    <>
+                        <Link href="/secret">
+                            <a>Secret view</a>
+                        </Link>
+                        <Link href="/logout">
+                            <a>Logout</a>
+                        </Link>
+                    </>
+                ) : (
+                    <>
+                        <Link href="/login">
+                            <a>Login</a>
+                        </Link>
+                        <Link href="/signup">
+                            <a>Signup</a>
+                        </Link>
+                    </>
+                )}
             </header>
         </>
     );
