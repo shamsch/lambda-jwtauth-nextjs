@@ -30,7 +30,6 @@ const Login = () => {
 		})
 			.then((res) => res.json())
 			.then((data) => {
-				console.log(email, password);
 				if (data.error) {
 					setError(data.error);
 				}
