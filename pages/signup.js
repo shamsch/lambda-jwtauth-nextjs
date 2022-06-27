@@ -16,7 +16,7 @@ const Signup = () => {
 
 	const handleSubmit = (e) => {
 		e.preventDefault();
-		if (passwordStrength >= 3) {
+		if (passwordStrength >= 2) {
 			handleSignUp(email, password);
 		} else {
 			setError("Password is not strong enough");
